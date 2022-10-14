@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/loginScreen/constants.dart';
+import 'package:flutter_ui/loginScreen/sign_in_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,15 +16,17 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: const TextTheme(
-          headline4: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-          headline6: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+            headline4: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+            headline6: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+            button: TextStyle(
+              fontWeight: FontWeight.bold,
+            )),
       ),
       home: const WelcomeScreen(),
     );
@@ -67,7 +70,11 @@ class WelcomeScreen extends StatelessWidget {
                   const Spacer(),
                   FittedBox(
                     child: GestureDetector(
-                      // onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: ((context) => ))),
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const SignInScreen(),
+                        ),
+                      ),
                       child: Container(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 26,
