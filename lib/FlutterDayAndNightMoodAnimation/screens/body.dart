@@ -13,7 +13,18 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  bool isFullSun = true;
+  bool isFullSun = false;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 1), () {
+      setState(() {
+        isFullSun = true;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     List<Color> lightBgColors = const [
@@ -46,7 +57,6 @@ class _BodyState extends State<Body> {
       duration: const Duration(seconds: 1),
       curve: Curves.easeInOut,
       height: SizeConfig.screenHeight,
-      width: double.infinity,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
