@@ -18,7 +18,7 @@ class Sun extends StatelessWidget {
       duration: duration,
       curve: Curves.easeInOut,
       left: getProportionateScreenWidth(30),
-      bottom: getProportionateScreenWidth(isFullSun ? 45 : -120),
+      bottom: getProportionateScreenWidth(isFullSun ? -50 : -120),
       child: SvgPicture.asset('assets/FlutterDayAndNightMoodAnimation/Sun.svg'),
     );
   }

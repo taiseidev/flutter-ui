@@ -14,11 +14,13 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   bool isFullSun = false;
+  bool isDayMood = true;
+  final duration = const Duration(seconds: 1);
 
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(duration, () {
       setState(() {
         isFullSun = true;
       });
@@ -31,6 +33,7 @@ class _BodyState extends State<Body> {
       Color(0xFF8C2480),
       Color(0xFFCE587D),
       Color(0xFFFF9485),
+      Color(0xffff9D80)
     ];
 
     var darkBgColors = const [
@@ -54,7 +57,7 @@ class _BodyState extends State<Body> {
     }
 
     return AnimatedContainer(
-      duration: const Duration(seconds: 1),
+      duration: duration,
       curve: Curves.easeInOut,
       height: SizeConfig.screenHeight,
       decoration: BoxDecoration(
@@ -67,7 +70,7 @@ class _BodyState extends State<Body> {
       child: Stack(
         children: [
           Sun(
-            duration: const Duration(seconds: 1),
+            duration: duration,
             isFullSun: isFullSun,
           ),
           const Land(),
