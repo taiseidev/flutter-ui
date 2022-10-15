@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:
@@ -19,3 +20,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/loginScreen/login-screen-background.jpeg
+    - assets/FlutterDayAndNightMoodAnimation/land_tree_light.png
+    - assets/FlutterDayAndNightMoodAnimation/Sun.svg
