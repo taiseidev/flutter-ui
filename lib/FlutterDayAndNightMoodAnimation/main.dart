@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/FlutterDayAndNightMoodAnimation/login_screen.dart';
+import 'package:flutter_ui/FlutterDayAndNightMoodAnimation/screens/login_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,10 +8,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter-Day-and-Night-Mood-Animation',
       debugShowCheckedModeBanner: false,
-      home: const LoginScreen(),
+      home: LoginScreen(),
     );
   }
 }
