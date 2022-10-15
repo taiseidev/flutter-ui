@@ -13,7 +13,6 @@ class Tabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: SizeConfig.screenWidth! * 0.8,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(12)),
         color: Colors.white24,

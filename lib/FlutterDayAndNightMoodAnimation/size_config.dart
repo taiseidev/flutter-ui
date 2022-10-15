@@ -16,22 +16,20 @@ class SizeConfig {
   }
 }
 
-// ハードコーディング部分は各端末の高さと幅
-
 double getProportionateScreenHeight(double inputHeight) {
   double screenHeight = SizeConfig.screenHeight!;
-  return (inputHeight / 896.0) * screenHeight;
+  return (inputHeight / screenHeight) * screenHeight;
 }
 
 double getProportionateScreenWidth(double inputHeight) {
   double screenWidth = SizeConfig.screenWidth!;
-  return (inputHeight / 414.0) * screenWidth;
+  return (inputHeight / screenWidth) * screenWidth;
 }
 
 // 縦方向にスペースを追加
 class VerticalSpacing extends StatelessWidget {
   const VerticalSpacing({
-    required super.key,
+    super.key,
     this.of = 25,
   });
 

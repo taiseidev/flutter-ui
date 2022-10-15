@@ -20,3 +20,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/loginScreen/login-screen-background.jpeg
+    - assets/FlutterDayAndNightMoodAnimation/land_tree_light.png
+    - assets/FlutterDayAndNightMoodAnimation/Sun.svg
